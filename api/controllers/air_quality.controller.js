@@ -48,8 +48,8 @@ exports.max_pollution = async (req, res) => {
     // Query pipeline
     let pipeline = [
         {$match: {city: 'Paris'}},
-        {$project: {_id: 1, created_at: 1, time:1}},
-        {$sort: {"pollution.aqius": -1 }},
+        {$project: {_id: 1, date: 1, time:1}},
+        {$sort: {"pollution.aqius": -1, date: -1 }},
         {$limit: 1}
     ]
     const pollution = await AirQuality.aggregate(pipeline);

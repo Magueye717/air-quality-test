@@ -11,7 +11,7 @@ const airQuality = mongoose.Schema({
         type: String,
         required: true,
     },
-    created_at : { 
+    date : { 
         type : Date, 
         default: Date.now 
     }

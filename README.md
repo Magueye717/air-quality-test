@@ -14,17 +14,18 @@ http://127.0.0.1:8000/api/v1
 
 **Endpoints:**
 
-```
-."/pollution"
-. params: {lat(Number), lon(Number), key(String)}
-.Exemple: "{base_url}/pollution?lat={latitude}&lon={longitude}&key={key}"
-```
+    ```
+    Description : Make a call to IQAIR API to get “air quality “ for the given zone
+    route : "/pollution":
+    Params : {lat: value, lon: value, key: value}
+    Exemple: "{base_url}/pollution?lat={latitude}&lon={longitude}&key={key}"
+    ```
 
-```
-Get max pollution :
-."/max_pollution"
-.Exemple: "{base_url}/max_pollution"
-```
+    ```
+    Description : Get datetime( date and time ) where the paris zone is the most polluted
+    route : "/max_pollution"
+    Exemple: "{base_url}/max_pollution"
+    ```
 
 #### Steps to run the project
 
@@ -43,8 +44,7 @@ npm install or yarn install
 3. **Run the project:**
 
 ```
-To use local DB => npm start or yarn start
-To use cluster DB => npm run prod or yarn run prod
+ npm start or yarn start
 ```
 
 4. **Run the tests:**

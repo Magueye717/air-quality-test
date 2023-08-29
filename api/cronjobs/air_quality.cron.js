@@ -10,7 +10,7 @@ module.exports =  async (req, res) =>  {
         const time = new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 
         let iqair = new AirQuality({
-            created_at: Date.now(),
+            date: Date.now(),
             time,
             city: 'Paris',
             pollution
